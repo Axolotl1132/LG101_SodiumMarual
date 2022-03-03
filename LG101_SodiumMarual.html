@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF8">
+	<title>LG101_SodiumMarual</title>
+</head>
+<body>
+	<button onclick="determineTriangle()">Go!</button>
+	<script>
+		function determineTriangle() {
+			let a = prompt();
+			let b = prompt();
+			let c = prompt();
+			console.log(a + " " + b + " " + c);
+			let x = isNaN(a);
+			let y = isNaN(b);
+			let z = isNaN(c);
+			console.log(x + " " + y + " " + z);
+
+			if(x==false && y==false && z==false) {
+				if(a==b && b==c && a==c) {
+					window.alert("The triangle is EQUILATERAL")
+				}
+				else if(a==b && b!=c || a!=b && b==c || a==c && c!=b) {
+					window.alert("The triangle is ISOSCELES")
+				}
+				else if(a!=b && b!=c && a!=c) {
+					window.alert("The triangle is SCALENE")
+				}
+			}
+			else {
+				window.alert('The input is not a number. Try again.')
+			}
+		}
+	</script>
+</body>
+</html>
